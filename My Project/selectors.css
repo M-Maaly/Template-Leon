@@ -1,0 +1,80 @@
+* {
+    font-size: 50px;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+div[class="main red"] {
+    color: chartreuse;
+}
+div:nth-child(2) {
+    color: chartreuse;
+}
+div :only-child {
+    color: chartreuse;
+}
+.assign-one {
+    font-size: 10px;
+}
+@media print {
+   .assign-one{ font-size: 50px;
+   }  
+}
+.med {
+    display: flex;
+    margin: 80px auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.med > div {
+    background-color: #9ed7db;
+    color: mediumseagreen;
+    display: grid;
+    width: calc(25% - 40px);
+    font-size: 19px;
+    font-weight: 600;
+    margin: 5px;
+    padding: 15px 0px 38px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: space-around;
+    position: relative;
+}
+.med > div::after {
+    content: "This Is Prduct";
+    position: absolute;
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    font-size: 17px;
+    font-weight: 400;
+}
+
+@media (max-width:767px) {
+    .med > div {
+        width: calc(100% - 10px);
+    }
+
+}
+@media (min-width:768px) {
+    .med > div {
+        width: calc(50% - 20px);
+        color: red;
+        background-color: darkblue;
+    }
+
+}
+@media (min-width:992px) {
+    .med > div {
+        width: calc(50% - 20px);
+    }
+
+}
+@media (min-width:1100px) {
+    .med > div {
+        width: calc(25% - 40px);
+        color: black;
+        background-color: coral;
+    }
+
+}
